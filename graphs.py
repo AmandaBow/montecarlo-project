@@ -3,11 +3,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def plot_results(heat, traj_x, traj_y, grid_size):
+def plot_results(heat, traj_x, traj_y, grid_size_x, grid_size_y):
 
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 6))
 
-    center = grid_size // 2
+    center_x, center_y = grid_size_x // 2, grid_size_y // 2
 
 
     # -------------------------------
@@ -30,8 +30,8 @@ def plot_results(heat, traj_x, traj_y, grid_size):
         )
 
     ax1.scatter(
-        center,
-        center,
+        center_x,
+        center_y,
         color="black",
         marker="*",
         s=100,
@@ -42,8 +42,8 @@ def plot_results(heat, traj_x, traj_y, grid_size):
     ax1.set_xlabel("x")
     ax1.set_ylabel("y")
 
-    ax1.set_xlim(0, grid_size - 1)
-    ax1.set_ylim(0, grid_size - 1)
+    ax1.set_xlim(0, grid_size_x - 1)
+    ax1.set_ylim(0, grid_size_y - 1)
 
     ax1.grid(alpha=0.3)
     ax1.legend()
@@ -66,8 +66,8 @@ def plot_results(heat, traj_x, traj_y, grid_size):
     ax2.set_ylabel("y")
 
     ax2.scatter(
-        center,
-        center,
+        center_x,
+        center_y,
         color="white",
         marker="*",
         s=100

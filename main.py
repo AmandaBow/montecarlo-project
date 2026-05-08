@@ -8,16 +8,19 @@ from graphs import plot_results
 random.seed(42)
 
 def random_walk(grid_size_x = 101, grid_size_y = 101, N = 200, steps = 1000, n_trails = 5):
+    # center
+    center_x = grid_size_x // 2
+    center_y = grid_size_y // 2
     # all particles start center
-    x = [grid_size_x // 2] * N
-    y = [grid_size_y // 2] * N
+    x = [center_x // 2] * N
+    y = [center_y // 2] * N
 
     # heat accumulation grid
     heat = np.zeros((grid_size_y, grid_size_x))
 
     # store trajectories for a few particles
-    traj_x = [[x/N] for _ in range(n_trails)]
-    traj_y = [[y/N] for _ in range(n_trails)]
+    traj_x = [[center_x] for _ in range(n_trails)]
+    traj_y = [[center_y] for _ in range(n_trails)]
 
     # particle movement
     for step in range(steps):
@@ -69,6 +72,6 @@ if __name__ == "__main__":
 
     heat, traj_x, traj_y, grid_size_x, grid_size_y = random_walk()
 
-    plot_results(heat, traj_x, traj_y, grid_size)
+    plot_results(heat, traj_x, traj_y, grid_size_x, grid_size_y)
 
 
