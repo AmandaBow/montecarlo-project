@@ -94,4 +94,4 @@ Week 7
 I am currently done with week 4. I have to now create a PDE solver and a convergence graph to compare the random walk simulation to and see under what conditions the simulation becomes accurate (if at all). 
 
 ## LLM Disclosure
-The use of LLM such as ChatGPT and Claude.ai were used as s an assistant tools to improve the speed of simulation, debug code, and assist the creation of heatmap vizulatizations.
+The use of LLM such as ChatGPT and Claude.ai were used as s an assistant tools to improve the speed of simulation, debug code, and assisted the creation of heatmap vizulatizations and improvement of trajectory plots.
