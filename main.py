@@ -1,8 +1,8 @@
 
 # import libraries
 import numpy as np
-import matplotlib.pyplot as plt
 import random 
+from graphs import plot_results
 
 # set seed to make code reproducable
 random.seed(42)
@@ -62,6 +62,13 @@ def random_walk(grid_size, N, steps, n_trails):
             traj_x[j].append(x[j])
             traj_y[j].append(y[j])
 
-    return heat, traj_x, traj_y
+    return heat, traj_x, traj_y, grid_size
+
+
+if __name__ == "__main__":
+
+    heat, traj_x, traj_y, grid_size = random_walk_simulation()
+
+    plot_results(heat, traj_x, traj_y, grid_size)
 
 
