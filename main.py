@@ -12,8 +12,8 @@ def random_walk(grid_size_x = 101, grid_size_y = 101, N = 200, steps = 1000, n_t
     center_x = grid_size_x // 2
     center_y = grid_size_y // 2
     # all particles start center
-    x = [center_x // 2] * N
-    y = [center_y // 2] * N
+    x = [center_x] * N
+    y = [center_y] * N
 
     # heat accumulation grid
     heat = np.zeros((grid_size_y, grid_size_x))
